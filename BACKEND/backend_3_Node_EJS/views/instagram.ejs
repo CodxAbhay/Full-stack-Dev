@@ -1,0 +1,30 @@
+
+<!-- THIS IS INCLUDE CONSEPT  -->
+<!-- make sure you saved the includes file in the views folder -->
+<%- include("includes/head.ejs")  %>
+
+<body>
+    <h1>@ <%= data.name %>
+    </h1>
+    <button>Follow</button>
+    <button>Message</button>
+
+    <p>
+        Followers : <b><%= data.followers %></b> &nbsp; &nbsp; &nbsp;
+        Following : <b><%= data.following %></b>
+    </p>
+    <hr>
+    <% for(let post of data.posts){ %>
+        <img src=" <%= post.image %>" alt="Some Img"> 
+        <p>
+            Likes : <%= post.likes %> &nbsp;&nbsp;&nbsp;
+            Comments : <%= post.comments %>
+        </p>
+        <hr>
+
+    <% } %>
+
+    
+    <script src="/script.js"></script>
+</body>
+</html>

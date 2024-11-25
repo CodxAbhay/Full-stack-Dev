@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .mydiv{
+            height: 200px;
+            width: 200px;
+            background-color:aqua;
+
+            /* this is to make anyhting in center */
+            margin: 0 auto;
+
+            /* this is for delay  */
+            /* animation: myfirst 5s forwards; */
+            /* transition-duration: 1s;
+            transition-delay: 1s; */
+
+            /* transition: margin-top 2s ease-in ; */
+
+
+            /* NOW USING ROTATE PROPERTY 
+            * THIS PROPERTY HELPS YOU TO 
+            [ROTATE, SCALE, SKEW OR TRANSLATE] */
+            
+            transform: rotate(20deg);
+            /* transform: scale(1.5); */
+            /* transform: translate(100px);   this is to move betbeen x and y axis*/
+
+            /* now use skew  */
+            transform: skew(20deg);
+        }
+        .mydiv:hover {
+            background-color: brown;
+            border-radius: 50%;
+            margin-top: 250px;
+        }
+
+        .newdiv{
+            height: 400px;
+            width: 400px;
+            background-color: brown;
+            margin: 0 auto;
+            margin-top: 300px;
+
+            /* box shadow -->> it adds shadow effect
+            arround an element's frame*/
+            
+            /*    x offset y offset blur-radius color*/
+
+            box-shadow: 3px 3px 30px black;
+
+            /* now set an image as background  */
+            background-image: url('https://www.w3schools.com/howto/img_avatar.png');
+            background-size: 100%;
+            /* background-size: contain; */
+            /* background-size: cover; */
+            /* background-size: auto; */
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mydiv">
+
+    </div>
+
+    <div class="newdiv">
+
+    </div>
+    
+</body>
+</html>

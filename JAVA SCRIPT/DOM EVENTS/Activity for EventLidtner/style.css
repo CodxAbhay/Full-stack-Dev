@@ -1,0 +1,14 @@
+body{
+   text-align: center; 
+   font-family: Arial, sans-serif;
+   
+}
+
+div{
+    border: 2px solid black;
+    height: 800px;
+    width: 1500px;
+    margin:auto;
+    display: flex;
+
+}

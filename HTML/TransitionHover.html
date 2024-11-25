@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            transition: 2s;
+            /* transition-timing-function:cubic-bezier(0.6, 0.04, 0.98, 0.335); */
+        }
+        div:hover{
+            background-color: blue;
+            border-radius: 60px;
+            transform: rotate(100deg);
+            transform: scale(2);
+        }
+        .xyz{
+            margin: 0 auto;
+            transition: margin-top 1s ease-in 0.2ms;
+
+        }
+        .xyz:hover{
+            background-color: pink;
+            margin-top: 300px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+
+    <br>
+    <div class="xyz"></div>
+</body>
+</html>

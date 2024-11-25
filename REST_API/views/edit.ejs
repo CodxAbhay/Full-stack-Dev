@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- we directly can not send the patch request through forms 
+    so we will install a npm  -method override then we can send any request throuh form by just overriding  -->
+    <h1>Edit Your Post:</h1>
+    <h2>Post ID: <%= post.id %></h2>
+    <h2>Post Username: @<%= post.username %> </h2>
+    <form method="post" action="http://localhost:8080/posts/<%=post.id%>?_method=PATCH">
+        <textarea name="content" rows="10" cols="40" ><%= post.content %></textarea>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

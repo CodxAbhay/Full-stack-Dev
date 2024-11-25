@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.main_box{
+    background: url(photo.jpg);
+    /* height: 100%;   --> if this is not working to show image on full scren then use [100vh] */
+    height: 100vh;
+    background-size: cover;
+}
+
+.btn_one{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+.btn_two{
+    color: gray;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 275px;
+    line-height: 60px;
+    /* opacity: 0; */
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+.sidebar_menu{
+    position: fixed;
+    left: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+    /* color: white; */
+    transition: all 0.5s linear;
+}
+
+.sidebar_menu .logo{
+    position: absolute;
+    width: 100%;
+    line-height: 60px;
+    box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+    height: 60px;
+
+}
+
+.sidebar_menu .logo a{
+    position: absolute;
+    left: 50px;
+    color: white;
+}
+
+
+
+.sidebar_menu .menu{
+    /* color: white; */
+    position: absolute;
+    width: 100%;
+    top: 50px;
+}
+
+.sidebar_menu .menu li{
+    margin-top: 6px;
+    padding: 14px 20px;
+}
+
+.sidebar_menu .menu li, a{
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar_menu .menu i{
+    padding-right: 8px;
+}
+
+.sidebar_menu .social_media{
+    color: white;
+    opacity: 0.8;
+    position: absolute;
+    left: 25px;
+    bottom: 30px;
+}
+
+.sidebar_menu .social_media i{
+    opacity: 0.5;
+    padding: 0 5px;
+    cursor: pointer;
+
+}
+
+#check{
+    /*this will make it disappare it will also remove the space  */
+    display: none;
+}
+
+
+
+/* Now basic css has been applied 
+it's time to apply the hover and all property */
+
+
+.btn_one:hover{
+    color: white;
+    font-size: 35px;
+}
+
+.btn_two:hover{
+    color: white;
+    font-size: 35px;
+}
+
+.sidebar_menu .menu li:hover{
+    box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
+}
+
+.sidebar_menu .social_media i:hover {
+    opacity: 1;
+    transform: scale(1.6);
+}
+
+#check:checked ~ .sidebar_menu{
+    left: 0px;
+}
+
+#check:checked ~ .btn_one i{
+    opacity: 0;
+}
+#check:checked ~ .sidebar_menu .btn_two i{
+    opacity: 1;
+}

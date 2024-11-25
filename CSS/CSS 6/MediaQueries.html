@@ -1,0 +1,53 @@
+
+
+<!--It helps to creat responsive website
+    like when we have different devise to run the website then we use @media queries -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            height: 500px;
+            width: 1000px;
+            background-color: aqua;
+        }
+        h1{
+            background-color: pink;
+            border: 2px solid black;
+        }
+
+        /* @media (width : 400px){
+            h1{
+                background-color: red;
+            }
+        } */
+        @media (min-width : 600px){
+            h1{
+                background-color: red;
+            }
+        }
+        @media (max-width : 800px){
+            h1{
+                background-color: rgb(8, 2, 2);
+            }
+        }
+        @media(min-width:300px) and (max-width:500px){
+            h1, div{
+                background-color: darkgreen;
+            }
+        }
+            
+    </style>
+</head>
+<body>
+    <h1>Using media queries</h1>
+    <div>
+
+    </div>
+</body>
+</html>

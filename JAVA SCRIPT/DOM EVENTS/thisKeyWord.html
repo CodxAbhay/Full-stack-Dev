@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+
+    <button>Click me</button>
+
+
+    <!-- here we will write the code for js -->
+    <script>
+        let tp = document.querySelector("input");
+
+        // we will learn here about the ** this ** keyword and keyborad button even
+        // this.   --- this key will works only on the things in which it is being called
+
+        tp.addEventListener("keypress", function(event){
+            console.log("key pressed");
+            console.log(event);
+            console.log(this.tp);
+        })
+
+    </script>
+</body>
+</html>

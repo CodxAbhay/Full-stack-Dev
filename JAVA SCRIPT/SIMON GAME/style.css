@@ -1,0 +1,38 @@
+body{
+    text-align: center;
+}
+
+.btn{
+    background-color: #4CAF50;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    border: 2px solid black;
+    margin: 20px;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+.yellow{
+    background-color: yellow;
+}
+.red{
+    background-color: red;
+}
+.purple{
+    background-color: purple;
+}
+.green{
+    background-color: green;
+}
+
+/* this class is not present now 
+but if we want to flash a div then we will give the class name to that div 
+usnig javascript */
+
+.flash{
+    background-color: white;
+}

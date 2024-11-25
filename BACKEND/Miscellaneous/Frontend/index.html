@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend</title>
+</head>
+<body>
+    <form method="get" action="http://localhost:8080/register">
+        <h1>Using Get Method</h1>
+        <input type="text" name="name" placeholder="Enter your name">
+        <input type="password" placeholder="Enter your password" name="password">
+        <button>Submit</button>
+    </form>    
+    <br><br><hr>
+    <form method="post" action="http://localhost:8080/register">
+        <h1>Using post Method</h1>
+        <input type="text" name="name" placeholder="Enter your name">
+        <input type="password" placeholder="Enter your password" name="password">
+        <button>Submit</button>
+    </form>
+</body>
+</html>
+
+<!-- when we use get method in the form  -->
+ <!-- 1. The data is sent to the server in the URL -->
+  <!-- 2. The data is visible in the URL -->
+
+<!-- when we use post method in the form -->
+ <!-- 1. The data is sent to the server in the body of the HTTP request -->
+  <!-- 2. The data is not visible in the URL

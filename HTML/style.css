@@ -1,0 +1,100 @@
+/* universal selecter for html file */
+*{
+    /* background-color: rgb(133, 252, 252, 1.893); */
+    /* background-color: white; */
+}
+
+h1{
+    color: #b92b27;
+}
+
+h3{
+    color: red;
+}
+
+button{
+    background-color: rgba(192, 157, 248, 0.551);
+    color: blue;
+}
+
+p{
+    color: rgb(183, 10, 209);
+}
+
+#login{
+    /* background-color: #f0f0f0; */
+    text-align: center;
+}
+
+/* decendent selector 
+   you can select using hericacy  */
+
+main p a{
+    color: #45f207;
+    /* background-color: rgb(245, 245, 45); */
+}
+
+/* you can select with condition */
+
+input[type="text"]{
+    color: green;
+}
+input[type="password"]{
+    color: rgb(244, 16, 119);
+}
+
+
+
+
+/*  HOVER AND PSEUDO CLASS */
+
+button:hover{
+    background-color: black;
+    color: white;
+    text-align: right;
+}
+
+h3:hover{
+    background-color: black;
+    color: yellow;
+}
+
+h1:hover{
+    text-align: center;
+}
+
+button:active{
+    color: rgb(255, 0, 251);
+    background-color: white;
+}
+
+p:active{
+    font-weight:bolder;
+    color: fuchsia;
+}
+
+input[type = 'radio']:checked + label{
+    background-color: rgb(245, 249, 5);
+    color: #d21812;
+}
+
+div:nth-of-type(2n+1){
+    background-color: rgb(220, 243, 117);
+}
+
+
+/* psedo elements */
+
+/* it can change to particuler text or anything  */
+
+h1::first-letter{
+    color: green;
+}
+
+p::first-line{
+    color: black
+}
+
+p::selection{
+    background-color: yellow
+}

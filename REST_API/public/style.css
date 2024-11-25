@@ -1,0 +1,17 @@
+
+h1{
+    color:brown;
+}
+
+div{
+    background-color: rgb(165, 239, 254);
+}
+
+.user{
+    text-decoration: double;
+    font-style: italic;
+}
+
+.content{
+    background-color: yellow;
+}

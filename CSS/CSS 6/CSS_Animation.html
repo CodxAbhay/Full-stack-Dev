@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS -->
+    <!-- CSS ANIMATION SYNTEX -->
+
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            background-color: aquamarine;
+
+            /* animation property to use the animation as we want on the div */
+
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* animation: fontAnimation 6s ease-out 0s infinite alternate ; */
+            animation: ColorAnimation 6s ease-out 0s infinite alternate ;
+        }
+
+        @keyframes ColorAnimation {
+            from{
+                background-color: pink;
+                font-size: 100px;
+                width: 300px;
+            }
+            to{
+                background-color: blueviolet;
+                font: size 300px;
+                width: 600px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>CSS animation</h1>
+    <div class="animation">
+        This is animation.
+    </div>
+</body>
+</html>

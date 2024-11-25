@@ -1,0 +1,17 @@
+
+<!-- now getting head from head.ejs -- also in this way we can get all the css applied here  -->
+<%- include("includes/head.ejs")  %>
+
+<body>
+    <h1>Dice gave value : <%= diceVal %></h1>
+    <!-- now using conditional statement  -->
+    <% if (diceVal == 6 ) { %>
+        <h3>well done ! You won the match</h3>
+    <% } %>
+
+    <!-- Now using loops -->
+    <% for (let i = 0; i < 5; i++) { %>
+        <h3>Loop value : <%= i %></h3>
+    <% } %>
+</body>
+</html>

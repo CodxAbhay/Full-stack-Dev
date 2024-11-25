@@ -1,0 +1,64 @@
+h1 {
+    border-style:solid;
+    border-color: rgb(9, 239, 9);
+    border-radius: 15px;
+    border-width: 3px;
+    padding: 10px;
+    width: 310px;
+}
+
+div{
+    height: 200px;
+    width: 300px;
+    border-style:groove;
+    border-color:rgb(230, 21, 21);
+    border-radius: 7%;
+    border-top-color: rgb(47, 239, 146);
+    border-right-style: dashed;
+
+
+    /* content inside the box will be fixied */
+    
+    padding: 20px;
+    /* padding-left: 9px;
+    padding-top: 10px;
+    padding-bottom:10px;
+    padding-right: 10px; */
+
+
+    background-color: rgb(255, 227, 232);
+
+    text-align: justify;
+
+    /* To set spacing on the outside of the border */
+    /* margin: 10px; */
+    margin-top: 20px;
+
+    /* display inline block will be make eveything in inline and also it will apply 
+    all the style in inline 
+    But if you write only [display:inline;] 
+    then the style of block will not apply in inline only few of them will be applied*/
+    
+    display: inline-block;
+
+
+}
+
+button{
+    background-color: rgb(247, 243, 21);
+
+    border: 5px;
+    border-color: rgb(68, 15, 243);
+    border-style:ridge;
+
+
+    width: 200px;
+
+    margin: 10px;
+
+    border-radius: 10%;
+    padding: 10px;
+
+
+
+}

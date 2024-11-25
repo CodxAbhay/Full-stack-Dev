@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="name" placeholder="Enter your name" id="user">
+        <input type="password" name="" id="pass">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        let forms = document.querySelector("form");
+        
+        forms.addEventListener("submit",function(event){
+            event.preventDefault();
+            console.dir(forms);
+            
+            // let user = document.querySelector("#user");
+            // let pass = document.querySelector("#pass");
+            let user = this.elements[0];  // this is another method to acces the html 
+            let pass = this.elements[1];  // this will replace the above document.querySelector("#pass");
+            console.log(user.value);
+            console.log(pass.value);
+        });
+
+        // change event -- 
+        // the change event occur when the value of an element has been change (works only on - input, textarea and select elemtn)
+        // it track the change b/w initial and final value of the element
+
+        let name = document.querySelector("#user");
+        name.addEventListener("change", function(event){
+            event.preventDefault();
+            console.log("Change Event occur");
+            console.log(name.value);
+        })
+        
+        //input event track all the small changes -- means it track each word when you type 
+        let name1 = document.querySelector("#user");
+        name1.addEventListener("input", function(event){
+            event.preventDefault();
+            console.log("Input event occur");
+            console.log("Changed value: ",name1.value);
+        });
+
+
+        // what is event bubling
+        // event bubling is a process where the event is first handled by the innermost element and
+        // then it is passed to the outermost element
+        // it is a default behavior of the dom
+        
+        // How to stop event bubling
+        // we can stop event bubling by using event.stopPropagation() method
+        
+
+
+    </script>
+</body>
+</html>
