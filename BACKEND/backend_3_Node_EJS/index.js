@@ -1,7 +1,8 @@
 const express = require("express");
 const app = express();
 
-const path = require("path");  // requring path so that we can tell the render that out view file is existed where no matter we run our server from anywehere but it will always get to know that wher is views and .ejs file 
+const path = require("path");  // requring path so that we can tell the render that 
+//our view file is existed where no matter we run our server from anywehere but it will always get to know that wher is views and .ejs file 
 
 
 const port = 8080;
