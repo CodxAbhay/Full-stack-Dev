@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Chat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff, #cfe7fa);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        form {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        label {
+            font-size: 1rem;
+            color: #555;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        input[type="text"]:focus {
+            border-color: #0077cc;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 119, 204, 0.5);
+        }
+
+        button {
+            background: #0077cc;
+            color: white;
+            border: none;
+            padding: 12px 16px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background: #005fa3;
+        }
+    </style>
+</head>
+<body>
+    <form action="http://localhost:8080/addchat" method="post">
+        <h1>New Chat</h1>
+
+        <label for="from">From</label>
+        <input type="text" name="from" id="from" placeholder="Enter sender's name"> 
+
+        <label for="to">To</label>
+        <input type="text" name="to" id="to" placeholder="Enter recipient's name"> 
+
+        <label for="message">Message</label>
+        <input type="text" name="message" id="message" placeholder="Type your message here"> 
+
+        <button type="submit">Add Chat</button>
+    </form>
+</body>
+</html>

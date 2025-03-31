@@ -16,6 +16,9 @@
             <a href="http://localhost:8080/posts/<%=post.id%>">Detailed View</a><br>
             <a href="http://localhost:8080/posts/<%=post.id%>/edit">Edit Post</a><br>
         </div>
+        <form method="post" action="http://localhost:8080/posts/<%=post.id%>?_method=DELETE">
+            <button>Delete</button>
+        </form>
     <% } %>
 
     <h3>Add new Post</h3>

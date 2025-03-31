@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat History</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 2rem;
+        }
+
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #3498db;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .chat {
+            background: #fff;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .chat:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .chat p {
+            margin: 0.5rem 0;
+            color: #34495e;
+            font-size: 0.95rem;
+        }
+
+        .chat p:first-child {
+            color: #3498db;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .chat div {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid #3498db;
+        }
+
+        .chat div p {
+            color: #2c3e50;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .chat p:last-child {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            text-align: right;
+            font-style: italic;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #e0e0e0;
+            margin: 1.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 1rem;
+                padding: 1rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .chat {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Message History</h2>
+
+        <% for(let chat of chats){ %>
+            <div class="chat">
+                <p>From: <%= chat.from %></p>
+                <div>
+                    <p><%= chat.message %></p>
+                    <form action="http://localhost:8080/chats/<%= chat._id %>/edit" method="get">
+                        <button>Edit</button>
+                    </form>
+                    <br>
+                    <form action="http://localhost:8080/chats/<%= chat._id %>?_method=DELETE" method="post">
+                        <button>Delete</button>
+                    </form>
+                </div>
+                <p>Received by: <%= chat.to %></p>
+                <p>Time: <%= chat.created_at.toString().split(" ")[4] %> </p>
+                <p>Date: <%= chat.created_at.toString().split(" ").slice(0,4).join(" ") %> </p>
+            </div>
+        <% } %>
+        
+    
+    <div class="container">
+    <form action="http://localhost:8080/newchat" method="get">
+        <button>New Chat</button>
+    </form>
+    </div>
+    
+</body>
+</html>

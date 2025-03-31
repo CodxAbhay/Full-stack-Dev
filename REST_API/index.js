@@ -91,3 +91,10 @@ app.get("/posts/:id/edit",(req,res)=>{
     let post = posts.find(post => post.id == id);
     res.render("edit.ejs",{post});
 });
+
+app.delete("/posts/:id", (req,res) =>{
+    let {id} = req.params;
+    let index = posts.findIndex(post => post.id == id);
+    posts.splice(index,1);
+    res.redirect("/posts");
+})
